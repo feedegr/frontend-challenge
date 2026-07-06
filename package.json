@@ -1,0 +1,28 @@
+{
+  "name": "invisible-geeks-frontend-challenge",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Prueba técnica de frontend de Invisible Geeks — replicar un componente de Figma en Vue 3 + Tailwind.",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/challenge.mjs start --if-missing",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "challenge:start": "node scripts/challenge.mjs start",
+    "challenge:submit": "node scripts/challenge.mjs submit",
+    "challenge:time": "node scripts/challenge.mjs time"
+  },
+  "dependencies": {
+    "vue": "^3.4.38"
+  },
+  "devDependencies": {
+    "@fontsource/bricolage-grotesque": "^5.0.19",
+    "@fontsource/manrope": "^5.0.20",
+    "@vitejs/plugin-vue": "^5.1.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.6"
+  }
+}

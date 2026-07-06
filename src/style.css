@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Las fuentes Bricolage Grotesque y Manrope ya están cargadas desde src/main.js
+  (paquetes @fontsource, funcionan offline). Podés usarlas por su nombre de familia:
+
+    font-family: 'Bricolage Grotesque', sans-serif;  (títulos)
+    font-family: 'Manrope', sans-serif;              (cuerpo)
+
+  o mapeándolas a tokens en tailwind.config.js si preferís clases utilitarias.
+*/
+
+html,
+body {
+  margin: 0;
+  font-family: 'Manrope', system-ui, sans-serif;
+}
