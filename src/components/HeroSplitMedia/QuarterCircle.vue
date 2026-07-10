@@ -14,7 +14,7 @@ const props = defineProps({
   // Diámetro del cuarto de círculo (px).
   size: { type: Number, default: 112 },
   // Cuánto sobresale del borde de la imagen (px).
-  overhang: { type: Number, default: 28 },
+  overhang: { type: Number, default: 24 },
 })
 
 // La esquina redondeada es la misma que la de anclaje → la curva apunta hacia afuera.

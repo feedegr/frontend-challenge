@@ -25,22 +25,24 @@ defineProps({
     <img :src="logo" alt="" class="absolute right-16 top-14 h-10 w-10" />
 
     <!-- Fila: grupo de imagen + contenido -->
-    <div class="mx-auto flex max-w-6xl items-center justify-between gap-x-20">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-x-16">
       <MediaFrame :image="image" :image-alt="imageAlt" class="shrink-0" />
 
-      <div data-role="content" class="max-w-md">
+      <div data-role="content" class="max-w-xl">
         <span
           data-role="badge"
-          class="inline-block rounded-full bg-white px-4 py-1.5 text-sm font-medium text-title"
+          class="inline-flex items-center rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-title ring-1 ring-black/5"
         >
           {{ category }}
         </span>
 
-        <h1 class="mt-6 font-display text-title-desktop font-semibold text-title">
+        <h1
+          class="mt-6 font-display text-title-desktop font-semibold tracking-tight text-title"
+        >
           {{ title }}
         </h1>
 
-        <p class="mt-5 text-base leading-6 text-description">
+        <p class="mt-5 max-w-lg text-base leading-6 text-description">
           {{ description }}
         </p>
       </div>
