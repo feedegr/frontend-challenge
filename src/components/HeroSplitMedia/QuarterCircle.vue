@@ -1,7 +1,9 @@
 <script setup>
 // Un cuarto de círculo decorativo, anclado a una esquina del grupo de imagen.
 // Se construye como un cuadrado con la esquina EXTERIOR redondeada al 100% (la curva
-// mira hacia afuera del grupo) y sobresale `overhang` px del borde de la imagen.
+// mira hacia afuera del grupo) y sobresale `overhang` del borde de la imagen.
+// `size` y `overhang` aceptan cualquier longitud CSS (incl. var()), para que el grupo
+// pueda reducirse de forma responsive desde MediaFrame.
 import { computed } from 'vue'
 
 const props = defineProps({
@@ -11,10 +13,10 @@ const props = defineProps({
   corner: { type: String, default: 'top-left' },
   // Capa respecto de la imagen: 'front' | 'back'
   layer: { type: String, default: 'front' },
-  // Diámetro del cuarto de círculo (px).
-  size: { type: Number, default: 112 },
-  // Cuánto sobresale del borde de la imagen (px).
-  overhang: { type: Number, default: 24 },
+  // Diámetro del cuarto de círculo (longitud CSS).
+  size: { type: String, default: '112px' },
+  // Cuánto sobresale del borde de la imagen (longitud CSS).
+  overhang: { type: String, default: '24px' },
 })
 
 // La esquina redondeada es la misma que la de anclaje → la curva apunta hacia afuera.
@@ -25,9 +27,9 @@ const radius = {
   'bottom-right': { borderBottomRightRadius: '100%' },
 }
 
-// Anclaje a la esquina, sobresaliendo `overhang` px hacia afuera en ambos ejes.
+// Anclaje a la esquina, sobresaliendo `overhang` hacia afuera en ambos ejes.
 const position = computed(() => {
-  const o = `-${props.overhang}px`
+  const o = `calc(-1 * ${props.overhang})`
   return {
     'top-left': { top: o, left: o },
     'top-right': { top: o, right: o },
@@ -37,8 +39,8 @@ const position = computed(() => {
 })
 
 const style = computed(() => ({
-  width: `${props.size}px`,
-  height: `${props.size}px`,
+  width: props.size,
+  height: props.size,
   ...position.value,
   ...radius[props.corner],
 }))

@@ -30,8 +30,9 @@ export default {
       },
     },
     screens: {
-      // The test's single responsive breakpoint. You can change it if you prefer.
-      laptop: '1024px',
+      // Desktop es la base (sin prefijo). `laptop:` aplica los overrides COMPACTOS en
+      // pantallas <= 1279px (el rango ~1024 del diseño). No apila: mismo layout, más chico.
+      laptop: { max: '1279px' },
     },
   },
   plugins: [],
