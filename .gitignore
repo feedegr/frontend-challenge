@@ -3,7 +3,7 @@ dist
 dist-ssr
 *.local
 .DS_Store
-
+claude.md
 # Editor
 .vscode/*
 !.vscode/extensions.json

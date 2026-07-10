@@ -3,15 +3,31 @@ export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      // 👋 This object is empty ON PURPOSE.
-      //
-      // You're free to define your own design tokens here (colors, typography,
-      // spacing, radii, breakpoints…) if you want — it's OPTIONAL but we value it.
-      // You can also lay things out with direct values (arbitrary values) if you prefer.
-      //
-      // Example (delete it or adapt it):
-      // colors: { brand: '#121212', 'gray-97': '#F5F5F5' },
-      // fontFamily: { display: ['Bricolage Grotesque', 'sans-serif'], body: ['Manrope', 'sans-serif'] },
+      colors: {
+        // Superficie del banner y tinta del texto.
+        banner: '#F5F5F5',
+        title: '#121212',
+        description: '#494B4D',
+        // Verde de marca para las formas (3 de los 4 cuartos de círculo).
+        brand: {
+          DEFAULT: '#00C266',
+          green: '#00C266',
+        },
+      },
+      fontFamily: {
+        // display → títulos · body → cuerpo (cargadas offline vía @fontsource en main.js).
+        display: ['Bricolage Grotesque', 'sans-serif'],
+        body: ['Manrope', 'sans-serif'],
+      },
+      fontSize: {
+        // Título: desktop y variante compacta 1024px (size / line-height).
+        'title-desktop': ['3.5rem', { lineHeight: '4.5rem' }], // 56 / 72
+        'title-compact': ['1.75rem', { lineHeight: '2.125rem' }], // 28 / 34
+      },
+      borderRadius: {
+        // Esquinas de la imagen del hero (~16–20px).
+        media: '1.25rem', // 20px
+      },
     },
     screens: {
       // The test's single responsive breakpoint. You can change it if you prefer.
