@@ -110,3 +110,6 @@ Everything you need is already in the repo (`public/assets/`), so you can work o
 We don't evaluate whether you use any particular library or "tricks": we want to see how you work.
 
 Good luck! 🦊
+
+
+## tiempo perdido por deberes inesperados; aprox 15 minutos.
