@@ -24,7 +24,7 @@ defineProps({
     <img
       :src="image"
       :alt="imageAlt"
-      class="relative z-10 h-full w-full rounded-media object-cover shadow-none transition-shadow duration-300 ease-out hover:shadow-2xl"
+      class="relative z-10 h-full w-full rounded-media object-cover transition-shadow duration-300 ease-out hover:shadow-2xl"
     />
 
     <!-- Delante de la imagen -->

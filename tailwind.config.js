@@ -9,10 +9,7 @@ export default {
         title: '#121212',
         description: '#494B4D',
         // Verde de marca para las formas (3 de los 4 cuartos de círculo).
-        brand: {
-          DEFAULT: '#00C266',
-          green: '#00C266',
-        },
+        brand: '#00C266',
       },
       fontFamily: {
         // display → títulos · body → cuerpo (cargadas offline vía @fontsource en main.js).
